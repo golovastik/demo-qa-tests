@@ -19,7 +19,7 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
                 .setEmail("chocoapril@mail.com")
                 .setGender("Male")
                 .setPhone("1234567890")
-                .setBirthDay("25", "July", "2008");
+                .setBirthDay("25", "July", "2007");
 
 
 
