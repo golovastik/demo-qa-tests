@@ -20,7 +20,14 @@ public class RegistrationPage {
             userEmail = $("#userEmail"),
             genterWrapper = $("#genterWrapper"),
             userNumber =  $("#userNumber"),
-            dateOfBirthInput = $("#dateOfBirthInput");
+            dateOfBirthInput = $("#dateOfBirthInput"),
+            subjectsInput =  $("#subjectsInput"),
+            hobbiesWrapper =  $("#hobbiesWrapper"),
+            uploadPicture =   $("#uploadPicture"),
+            currentAddress =  $("#currentAddress"),
+            state =  $("#state"),
+            city =  $("#city"),
+            submit = $("#submit");
 
 
 
@@ -62,6 +69,42 @@ public class RegistrationPage {
         dateOfBirthInput.click();
         calendarComponent.setDate(day, month, year);
         return this;
+    }
+
+    public RegistrationPage setSubject(String subj) {
+        subjectsInput.setValue(subj).pressEnter();
+        return this;
+    }
+
+    public RegistrationPage setHobbies(String hobbie) {
+        hobbiesWrapper.$(byText(hobbie)).click();
+        return this;
+    }
+
+    public RegistrationPage uplPicture(String picture) {
+        uploadPicture.uploadFromClasspath(picture);
+        return this;
+    }
+
+    public RegistrationPage serAddress(String address){
+        currentAddress.setValue(address);
+        return this;
+    }
+
+    public RegistrationPage setState(String stateValue) {
+        state.click();
+        $("#stateCity-wrapper").$(byText(stateValue)).click(); //todo Create component
+        return this;
+    }
+
+    public RegistrationPage setCity(String cityValue) {
+        city.click();
+        $("#stateCity-wrapper").$(byText(cityValue)).click();   //todo Create component
+        return this;
+    }
+
+    public void clickSubmitButton() {
+        submit.click();
     }
 
     public RegistrationPage verifyResultsModal() {
