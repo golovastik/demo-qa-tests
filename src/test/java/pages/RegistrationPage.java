@@ -16,7 +16,12 @@ public class RegistrationPage {
 
     private SelenideElement
             firstName = $("#firstName"),
-            lastName = $("#lastName");
+            lastName = $("#lastName"),
+            userEmail = $("#userEmail"),
+            genterWrapper = $("#genterWrapper"),
+            userNumber =  $("#userNumber"),
+            dateOfBirthInput = $("#dateOfBirthInput");
+
 
 
     public RegistrationPage openPage() {
@@ -39,22 +44,22 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setEmail(String value) {
-        $("#userEmail").setValue(value);    //todo move to Selenide elements
+        userEmail.setValue(value);
         return this;
     }
 
     public RegistrationPage setGender(String value) {
-        $("#genterWrapper").$(byText(value)).click();    //todo move to Selenide elements
+        genterWrapper.$(byText(value)).click();
         return this;
     }
 
     public RegistrationPage setPhone(String value) {
-        $("#userNumber").setValue(value);    //todo move to Selenide elements
+        userNumber.setValue(value);
         return this;
     }
 
     public RegistrationPage setBirthDay(String day, String month, String year) {
-        $("#dateOfBirthInput").click();     //todo move to Selenide elements
+        dateOfBirthInput.click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
