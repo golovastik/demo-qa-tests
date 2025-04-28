@@ -28,28 +28,6 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
                 .setCity("Noida")
                 .clickSubmitButton();
 
-
-
-
-        //$("#subjectsInput").setValue("English").pressEnter();
-
-        //$("#hobbiesWrapper").$(byText("Sports")).click();
-        //$("#hobbiesWrapper").$(byText("Music")).click();
-
-        //$("#uploadPicture").uploadFromClasspath("pxfuel.jpg");
-
-        //$("#currentAddress").setValue("USA Los Angeles Big street 14 aleha 44/31");
-
-
-        //$("#state").click();
-        //$("#stateCity-wrapper").$(byText("NCR")).click();
-//        $("#react-select-3-input").setValue("NCR").pressEnter();
-        //$("#city").click();
-        //$("#stateCity-wrapper").$(byText("Noida")).click();
-//        $("#react-select-4-input").setValue("Noida").pressEnter();
-        //$("#submit").click();
-
-
         registrationPage.verifyResultsModal()
                 .verifyResult("Student Name", userName + " Chocolate")
                 .verifyResult("Student Email", "chocoapril@mail.com")
