@@ -76,8 +76,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies(String hb) {
-        hobbiesWrapper.$(byText(hb)).click();
+    public RegistrationPage setHobbies(String hob) {
+        hobbiesWrapper.$(byText(hob)).click();
         return this;
     }
 
