@@ -19,28 +19,35 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
                 .setEmail("chocoapril@mail.com")
                 .setGender("Male")
                 .setPhone("1234567890")
-                .setBirthDay("25", "July", "2005");
+                .setBirthDay("25", "July", "2005")
+                .setSubject("English")
+                .setHobbies("Sports")
+                .uplPicture("pxfuel.jpg")
+                .serAddress("USA Los Angeles Big street 14 aleha 44/31")
+                .setState("NCR")
+                .setCity("Noida")
+                .clickSubmitButton();
 
 
 
 
-        $("#subjectsInput").setValue("English").pressEnter();
+        //$("#subjectsInput").setValue("English").pressEnter();
 
-        $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#hobbiesWrapper").$(byText("Music")).click();
+        //$("#hobbiesWrapper").$(byText("Sports")).click();
+        //$("#hobbiesWrapper").$(byText("Music")).click();
 
-        $("#uploadPicture").uploadFromClasspath("pxfuel.jpg");
+        //$("#uploadPicture").uploadFromClasspath("pxfuel.jpg");
 
-        $("#currentAddress").setValue("USA Los Angeles Big street 14 aleha 44/31");
+        //$("#currentAddress").setValue("USA Los Angeles Big street 14 aleha 44/31");
 
 
-        $("#state").click();
-        $("#stateCity-wrapper").$(byText("NCR")).click();
+        //$("#state").click();
+        //$("#stateCity-wrapper").$(byText("NCR")).click();
 //        $("#react-select-3-input").setValue("NCR").pressEnter();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Noida")).click();
+        //$("#city").click();
+        //$("#stateCity-wrapper").$(byText("Noida")).click();
 //        $("#react-select-4-input").setValue("Noida").pressEnter();
-        $("#submit").click();
+        //$("#submit").click();
 
 
         registrationPage.verifyResultsModal()
@@ -52,19 +59,19 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
         $("#closeLargeModal").click();
     }
 
-    @Test
-    void inputDataRegistration1() {
-        String userName = "April";
-
-        registrationPage.openPage();
-
-        registrationPage.setFirstName(userName);
-        registrationPage.setLastName("Chocolate");
-        registrationPage.setEmail("chocoapril@mail.com");
-        registrationPage.setGender("Male");
-        registrationPage.setPhone("1234567890");
-
-
-        //....
-    }
+//    @Test
+//    void inputDataRegistration1() {
+//        String userName = "April";
+//
+//        registrationPage.openPage();
+//
+//        registrationPage.setFirstName(userName);
+//        registrationPage.setLastName("Chocolate");
+//        registrationPage.setEmail("chocoapril@mail.com");
+//        registrationPage.setGender("Male");
+//        registrationPage.setPhone("1234567890");
+//
+//
+//        //....
+//    }
 }
