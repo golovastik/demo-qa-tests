@@ -25,6 +25,7 @@ public class RegistrationPage {
             hobbiesWrapper =  $("#hobbiesWrapper"),
             uploadPicture =   $("#uploadPicture"),
             currentAddress =  $("#currentAddress"),
+            stateCityЦrapper =   $("#stateCity-wrapper"),
             state =  $("#state"),
             city =  $("#city"),
             submit = $("#submit");
@@ -76,8 +77,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies(String hob) {
-        hobbiesWrapper.$(byText(hob)).click();
+    public RegistrationPage setHobbies(String hobb) {
+        hobbiesWrapper.$(byText(hobb)).click();
         return this;
     }
 
@@ -93,13 +94,13 @@ public class RegistrationPage {
 
     public RegistrationPage setState(String stateValue) {
         state.click();
-        $("#stateCity-wrapper").$(byText(stateValue)).click(); //todo Create component
+        stateCityЦrapper.$(byText(stateValue)).click();
         return this;
     }
 
     public RegistrationPage setCity(String cityValue) {
         city.click();
-        $("#stateCity-wrapper").$(byText(cityValue)).click();   //todo Create component
+        stateCityЦrapper.$(byText(cityValue)).click();
         return this;
     }
 

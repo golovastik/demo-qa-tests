@@ -32,7 +32,16 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
                 .verifyResult("Student Name", userName + " Chocolate")
                 .verifyResult("Student Email", "chocoapril@mail.com")
                 .verifyResult("Gender", "Male")
-                .verifyResult("Mobile", "1234567890");
+                .verifyResult("Mobile", "1234567890")
+                .verifyResult("Date of Birth", "25 July,2005")
+                .verifyResult("Subjects", "English")
+                .verifyResult("Hobbies", "Sports")
+                .verifyResult("Picture", "pxfuel.jpg")
+                .verifyResult("Address", "USA Los Angeles Big street 14 aleha 44/31")
+                .verifyResult("State and City", "NCR Noida");
+
+
+
 
         $("#closeLargeModal").click();
     }
