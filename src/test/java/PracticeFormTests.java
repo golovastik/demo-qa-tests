@@ -25,7 +25,7 @@ public class PracticeFormTests {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
-        $( "#firstName").setValue("April");
+        $( "#firstName").setValue("April"); 
         $("#lastName").setValue("Chocolate");
         $("#userEmail").setValue("chocoapril@mail.com");
         $("#genterWrapper").$(byText("Male")).click();
